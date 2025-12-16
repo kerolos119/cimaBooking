@@ -19,13 +19,13 @@ public class ShowTime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "showtime_id")
-    private int showTimeId;
+    private Long showTimeId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "movie_id",nullable = false)
     private Movie movie;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "hall_id",nullable = false)
     private Hall hall;
 

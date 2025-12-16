@@ -23,7 +23,7 @@ public class Movie {
     @Column(name = "movie_id")
     private Long movieId;
 
-    @Column(name = "title", nullable = false, unique = true)
+    @Column(name = "title", nullable = false)
     @NotBlank(message = "title is required")
     private String title;
 
@@ -35,8 +35,8 @@ public class Movie {
     @NotNull(message = "duration minutes is required")
     private Integer durationMinutes;
 
-    @Column(name = "catagory", nullable = false)
-    @NotNull(message = "catagory is required")
+    @Column(name = "category", nullable = false)
+    @NotNull(message = "category is required")
     @Enumerated(EnumType.STRING)
     private Category category;
 

@@ -1,0 +1,2 @@
+ALTER TABLE seats
+ALTER COLUMN seats_row TYPE VARCHAR(1);

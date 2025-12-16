@@ -175,6 +175,19 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>9.22.3</version>
+                <configuration>
+                    <url>jdbc:postgresql://localhost:5432/cima_booking_db</url>
+                    <user>postgres</user>
+                    <password>koko992002</password>
+                    <schemas>
+                        <schema>public</schema>
+                    </schemas>
+                </configuration>
+            </plugin>
 
 
 

@@ -17,13 +17,13 @@ public class Seats {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "seats_id",nullable = false)
-    private Integer seatsId;
+    private Long seatsId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "hall_id",nullable = false)
     private Hall hall;
 
-    @Column(name = "seats_row",nullable = false)
+    @Column(name = "seats_row", length = 1,nullable = false)
     @Pattern(regexp = "^[A-Z]$", message = "row must be a single uppercase letter")
     @NotBlank(message = "row is required")
     private String row;
@@ -33,7 +33,7 @@ public class Seats {
     @Min(value = 1, message = "column must be positive")
     private Integer columnNumber;
 
-    @Column(name = "seat_number", nullable = false ,unique = true)
+    @Column(name = "seats_number", nullable = false ,unique = true)
     private String seatNumber;
 
     @PrePersist

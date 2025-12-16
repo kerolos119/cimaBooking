@@ -20,7 +20,7 @@ public class Hall {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "hall_id")
-    private Integer hallId;
+    private Long hallId;
 
     @Column(name = "hall_name" , nullable = false ,unique = true)
     @NotBlank(message = "Hall name is required")

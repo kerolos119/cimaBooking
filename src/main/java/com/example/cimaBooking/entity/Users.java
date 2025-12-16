@@ -19,7 +19,7 @@ public class Users {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userId;
+    private Long userId;
 
     @Column(name = "username" , length = 50,nullable = false)
     @NotBlank(message = "username is required")
@@ -42,7 +42,7 @@ public class Users {
     @ToString.Exclude
     private String password;
 
-    @Column(name = "phoneNumber", length = 15 ,nullable = false)
+    @Column(name = "phone_number", length = 15 ,nullable = false)
     @NotBlank(message = "phone number is required")
     @Pattern(regexp = "^\\+?[1-9]\\d{7,14}$",
             message = "Invalid phone number")
